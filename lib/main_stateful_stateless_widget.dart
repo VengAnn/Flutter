@@ -29,6 +29,7 @@ class _HomeScreen extends State<HomeScreen> {
   double rotationZ = 0.1;
   String text = "";
   Color color = Colors.red;
+  double rotationX = 0.1;
 
   List<Color> lsColors = [
     Colors.black,
@@ -44,6 +45,7 @@ class _HomeScreen extends State<HomeScreen> {
   void initState() {
     Timer.periodic(Duration(seconds: 1), (timer) {
       setState(() {
+        rotationX += 0.1;
         rotationZ += 0.2;
         if (rotationZ < 1) {
           text = "I Love You!";
